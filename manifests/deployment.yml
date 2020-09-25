@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: calumnistpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calumnistpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: calumnistpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: calumnistpipelinesjavascriptdocker 
+          image: mycontainerregistryemver.azurecr.io/calumnistpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
